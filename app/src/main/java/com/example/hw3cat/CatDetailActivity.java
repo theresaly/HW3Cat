@@ -77,11 +77,11 @@ public class CatDetailActivity extends AppCompatActivity {
                 Glide.with(context).load(api.getUrl()).into(image);
                 description.setText(cat.getDescription());
                 origin.setText("Origin: "+cat.getOrigin());
-                temperament.setText("Temperament: \n"+cat.getTemperament());
+                temperament.setText(cat.getTemperament());
                 life_span.setText("Lifespan: "+cat.getLife_span());
                 weight.setText("Weight: "+cat.getWeight().getWeight());
                 dog_friendly.setText("Dog Friendliness: "+cat.getDog_friendly());
-                wikipedia_link.setText("Wikipedia Link: \n"+cat.getWikipedia_url());
+                wikipedia_link.setText(cat.getWikipedia_url());
 
                 if (CatDatabase.cats.containsKey(intentCat)){
                     favourite_btn.setImageResource(R.drawable.ic_favorite_black_24dp);
